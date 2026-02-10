@@ -9,6 +9,7 @@ app.get("/", (req, res) => {
   res.json({ success: true, data: { nama: "anggas" } });
   res.json({ success: false, data: { nama: "arif" } });
   res.json({ success: true, data: { nama: "arifali" } });
+  res.json({ success: true, data: { nama: "dili" } });
 });
 
 const PORT = process.env.PORT;
