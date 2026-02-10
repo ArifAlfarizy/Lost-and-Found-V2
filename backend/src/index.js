@@ -7,10 +7,7 @@ const app = express();
 app.get("/", (req, res) => {
   res.send("Alit");
   res.json({ success: true, data: { nama: "anggas" } });
-});
-app.post("/", (req, res) => {
-  res.send("Alit");
-  res.json({ success: true, data: { nama: "anggas" } });
+  res.json({ success: false, data: { nama: "arif" } });
 });
 
 const PORT = process.env.PORT;
