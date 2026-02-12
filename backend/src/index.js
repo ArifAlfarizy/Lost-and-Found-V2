@@ -1,13 +1,21 @@
 import express from "express";
 import dotenv from "dotenv";
+
+// Routes
+import userRouter from "./routes/userRoute.js";
+
 dotenv.config();
 
 const app = express();
 
+
+app.use(express.json());
+
+// API User
+app.use("/api/user", userRouter)
+
 app.get("/", (req, res) => {
   res.send("Alit");
-  res.json({ success: true, data: { nama: "anggas" } });
-  res.json({ success: false, data: { nama: "arif" } });
 });
 
 const PORT = process.env.PORT;
